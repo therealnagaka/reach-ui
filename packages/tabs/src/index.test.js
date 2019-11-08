@@ -1,58 +1,114 @@
 import React from "react";
-// import renderer from "react-test-renderer";
-// import { act } from "react-dom/test-utils";
 import { render, fireEvent } from "@testing-library/react";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "./index";
 import "@testing-library/jest-dom/extend-expect";
 
-describe("rendering", () => {
+const { click, keyDown } = fireEvent;
+
+function getTabPanel(container, button) {
+  return container.querySelector(`#${button.getAttribute("aria-controls")}`);
+}
+
+beforeEach(() => {
+  document.body.innerHTML = "";
+  jest.resetModules();
+});
+
+describe("rendering basic tabs", () => {
   it("should match the snapshot", () => {
     const { asFragment } = render(<BasicTabs />);
     expect(asFragment()).toMatchSnapshot();
   });
-  it("focuses the correct tab with keyboard navigation", () => {
-    const { getByText, getByRole, asFragment, container } = render(
-      <BasicTabs />
-    );
-    const firstTab = getByText("Tab One");
-    const tabList = getByRole("tablist");
 
-    function getTabPanelByButtonID(buttonId) {
-      return container.querySelector(
-        `#${container
-          .querySelector(`#${buttonId}`)
-          .getAttribute("aria-controls")}`
-      );
-    }
+  it("should navigate with the mouse", () => {
+    const { container, getByText, asFragment } = render(<BasicTabs />);
+    const tab1 = getByText("Tab One");
+    const tab2 = getByText("Tab Two");
+    const tab3 = getByText("Tab Three");
 
-    fireEvent.click(firstTab);
+    click(tab1);
 
-    fireEvent.keyDown(tabList, { key: "ArrowRight", code: 39 });
-    expect(document.activeElement).toBe(container.querySelector("#tab-2"));
-    expect(getTabPanelByButtonID("tab-2")).toBeVisible();
-    expect(getTabPanelByButtonID("tab-1")).not.toBeVisible();
+    expect(getTabPanel(container, tab1)).toBeVisible();
+    expect(getTabPanel(container, tab2)).not.toBeVisible();
+    expect(getTabPanel(container, tab3)).not.toBeVisible();
     expect(asFragment()).toMatchSnapshot();
 
-    fireEvent.keyDown(tabList, { key: "ArrowRight", code: 39 });
-    expect(document.activeElement).toBe(container.querySelector("#tab-3"));
-    expect(getTabPanelByButtonID("tab-3")).toBeVisible();
-    expect(getTabPanelByButtonID("tab-2")).not.toBeVisible();
+    click(tab2);
 
-    fireEvent.keyDown(tabList, { key: "ArrowRight", code: 39 });
-    expect(document.activeElement).toBe(container.querySelector("#tab-1"));
+    expect(getTabPanel(container, tab2)).toBeVisible();
+    expect(getTabPanel(container, tab1)).not.toBeVisible();
+    expect(getTabPanel(container, tab3)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
 
-    fireEvent.keyDown(tabList, { key: "ArrowLeft", code: 37 });
-    expect(document.activeElement).toBe(container.querySelector("#tab-3"));
+    click(tab1);
+    click(tab3);
 
-    fireEvent.keyDown(tabList, { key: "ArrowLeft", code: 37 });
-    fireEvent.keyDown(tabList, { key: "ArrowLeft", code: 37 });
-    expect(document.activeElement).toBe(container.querySelector("#tab-1"));
+    expect(getTabPanel(container, tab3)).toBeVisible();
+    expect(getTabPanel(container, tab1)).not.toBeVisible();
+    expect(getTabPanel(container, tab2)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-    fireEvent.keyDown(tabList, { key: "End", code: 35 });
-    expect(document.activeElement).toBe(container.querySelector("#tab-3"));
+  it("should navigate with the keyboard", () => {
+    const { container, getByText, getByRole, asFragment } = render(
+      <BasicTabs />
+    );
+    const tab1 = getByText("Tab One");
+    const tab2 = getByText("Tab Two");
+    const tab3 = getByText("Tab Three");
+    const tabList = getByRole("tablist");
 
-    fireEvent.keyDown(tabList, { key: "Home", code: 36 });
-    expect(document.activeElement).toBe(container.querySelector("#tab-1"));
+    click(tab1);
+
+    keyDown(tabList, { key: "ArrowRight", code: 39 });
+    expect(document.activeElement).toBe(tab2);
+    expect(getTabPanel(container, tab2)).toBeVisible();
+    expect(getTabPanel(container, tab1)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+
+    keyDown(tabList, { key: "ArrowRight", code: 39 });
+    expect(document.activeElement).toBe(tab3);
+    expect(getTabPanel(container, tab3)).toBeVisible();
+    expect(getTabPanel(container, tab2)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+
+    keyDown(tabList, { key: "ArrowRight", code: 39 });
+    expect(document.activeElement).toBe(tab1);
+    expect(getTabPanel(container, tab1)).toBeVisible();
+    expect(getTabPanel(container, tab3)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+
+    keyDown(tabList, { key: "ArrowRight", code: 39 });
+    keyDown(tabList, { key: "ArrowRight", code: 39 });
+    expect(document.activeElement).toBe(tab3);
+    expect(getTabPanel(container, tab3)).toBeVisible();
+    expect(getTabPanel(container, tab1)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+
+    keyDown(tabList, { key: "ArrowLeft", code: 37 });
+    expect(document.activeElement).toBe(tab2);
+    expect(getTabPanel(container, tab2)).toBeVisible();
+    expect(getTabPanel(container, tab3)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+
+    keyDown(tabList, { key: "ArrowLeft", code: 37 });
+    keyDown(tabList, { key: "ArrowLeft", code: 37 });
+    expect(document.activeElement).toBe(tab3);
+    expect(getTabPanel(container, tab3)).toBeVisible();
+    expect(getTabPanel(container, tab2)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+
+    keyDown(tabList, { key: "Home", code: 36 });
+    expect(document.activeElement).toBe(tab1);
+    expect(getTabPanel(container, tab1)).toBeVisible();
+    expect(getTabPanel(container, tab3)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
+
+    keyDown(tabList, { key: "End", code: 35 });
+    expect(document.activeElement).toBe(tab3);
+    expect(getTabPanel(container, tab3)).toBeVisible();
+    expect(getTabPanel(container, tab1)).not.toBeVisible();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
