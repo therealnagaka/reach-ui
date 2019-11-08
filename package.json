@@ -23,13 +23,8 @@
     "@babel/preset-react": "^7.6.3",
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/react": "^5.2.5",
-<<<<<<< HEAD
     "@testing-library/jest-dom": "^4.2.3",
     "@testing-library/react": "^9.3.2",
-=======
-    "@testing-library/jest-dom": "^4.2.0",
-    "@testing-library/react": "^9.3.0",
->>>>>>> aba31fec3f4bf4665d04cab4811bdc427f0a6ca8
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "autoprefixer": "^9.7.1",
