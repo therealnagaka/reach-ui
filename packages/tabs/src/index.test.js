@@ -1,7 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "./index";
-import "@testing-library/jest-dom/extend-expect";
 
 const { click, keyDown } = fireEvent;
 
@@ -9,15 +8,10 @@ function getTabPanel(container, button) {
   return container.querySelector(`#${button.getAttribute("aria-controls")}`);
 }
 
-beforeEach(() => {
-  document.body.innerHTML = "";
-  jest.resetModules();
-});
-
 describe("rendering basic tabs", () => {
-  it("should match the snapshot", () => {
-    const { asFragment } = render(<BasicTabs />);
-    expect(asFragment()).toMatchSnapshot();
+  beforeEach(() => {
+    document.body.innerHTML = "";
+    jest.resetModules();
   });
 
   it("should navigate with the mouse", () => {
@@ -31,14 +25,14 @@ describe("rendering basic tabs", () => {
     expect(getTabPanel(container, tab1)).toBeVisible();
     expect(getTabPanel(container, tab2)).not.toBeVisible();
     expect(getTabPanel(container, tab3)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("tab 1 clicked");
 
     click(tab2);
 
     expect(getTabPanel(container, tab2)).toBeVisible();
     expect(getTabPanel(container, tab1)).not.toBeVisible();
     expect(getTabPanel(container, tab3)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("tab 2 clicked");
 
     click(tab1);
     click(tab3);
@@ -46,7 +40,7 @@ describe("rendering basic tabs", () => {
     expect(getTabPanel(container, tab3)).toBeVisible();
     expect(getTabPanel(container, tab1)).not.toBeVisible();
     expect(getTabPanel(container, tab2)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("tab 1 then 3 clicked");
   });
 
   it("should navigate with the keyboard", () => {
@@ -64,51 +58,51 @@ describe("rendering basic tabs", () => {
     expect(document.activeElement).toBe(tab2);
     expect(getTabPanel(container, tab2)).toBeVisible();
     expect(getTabPanel(container, tab1)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed right to tab 2");
 
     keyDown(tabList, { key: "ArrowRight", code: 39 });
     expect(document.activeElement).toBe(tab3);
     expect(getTabPanel(container, tab3)).toBeVisible();
     expect(getTabPanel(container, tab2)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed right to tab 3");
 
     keyDown(tabList, { key: "ArrowRight", code: 39 });
     expect(document.activeElement).toBe(tab1);
     expect(getTabPanel(container, tab1)).toBeVisible();
     expect(getTabPanel(container, tab3)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed right back to the start");
 
     keyDown(tabList, { key: "ArrowRight", code: 39 });
     keyDown(tabList, { key: "ArrowRight", code: 39 });
     expect(document.activeElement).toBe(tab3);
     expect(getTabPanel(container, tab3)).toBeVisible();
     expect(getTabPanel(container, tab1)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed right twice to tab 3");
 
     keyDown(tabList, { key: "ArrowLeft", code: 37 });
     expect(document.activeElement).toBe(tab2);
     expect(getTabPanel(container, tab2)).toBeVisible();
     expect(getTabPanel(container, tab3)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed left to tab 2");
 
     keyDown(tabList, { key: "ArrowLeft", code: 37 });
     keyDown(tabList, { key: "ArrowLeft", code: 37 });
     expect(document.activeElement).toBe(tab3);
     expect(getTabPanel(container, tab3)).toBeVisible();
     expect(getTabPanel(container, tab2)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed left twice back to tab 3");
 
     keyDown(tabList, { key: "Home", code: 36 });
     expect(document.activeElement).toBe(tab1);
     expect(getTabPanel(container, tab1)).toBeVisible();
     expect(getTabPanel(container, tab3)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed home");
 
     keyDown(tabList, { key: "End", code: 35 });
     expect(document.activeElement).toBe(tab3);
     expect(getTabPanel(container, tab3)).toBeVisible();
     expect(getTabPanel(container, tab1)).not.toBeVisible();
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("keyed end");
   });
 });
 

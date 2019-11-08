@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`rendering basic tabs should match the snapshot 1`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed end 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -11,19 +11,18 @@ exports[`rendering basic tabs should match the snapshot 1`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--1--0"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--0"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-1"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab One
         </button>
         <button
-          aria-controls="panel--1--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="false"
           data-reach-tab=""
           id="tab-2"
@@ -34,12 +33,13 @@ exports[`rendering basic tabs should match the snapshot 1`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--1--2"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--2"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-3"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab Three
@@ -49,9 +49,10 @@ exports[`rendering basic tabs should match the snapshot 1`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--1--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
-          id="panel--1--0"
+          hidden=""
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -63,10 +64,10 @@ exports[`rendering basic tabs should match the snapshot 1`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--1--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--1--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -75,10 +76,9 @@ exports[`rendering basic tabs should match the snapshot 1`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--1--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--1--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -92,7 +92,7 @@ exports[`rendering basic tabs should match the snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 1`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed home 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -103,30 +103,30 @@ exports[`rendering basic tabs should navigate with the keyboard 1`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--0"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-1"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--1"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-2"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
+          aria-controls="panel--_REACH_ID_--2"
           aria-selected="false"
           data-reach-tab=""
           id="tab-3"
@@ -141,10 +141,9 @@ exports[`rendering basic tabs should navigate with the keyboard 1`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--3--0"
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -156,9 +155,10 @@ exports[`rendering basic tabs should navigate with the keyboard 1`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
-          id="panel--3--1"
+          hidden=""
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -167,10 +167,10 @@ exports[`rendering basic tabs should navigate with the keyboard 1`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -184,7 +184,7 @@ exports[`rendering basic tabs should navigate with the keyboard 1`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 2`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed left to tab 2 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -195,7 +195,7 @@ exports[`rendering basic tabs should navigate with the keyboard 2`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
+          aria-controls="panel--_REACH_ID_--0"
           aria-selected="false"
           data-reach-tab=""
           id="tab-1"
@@ -206,24 +206,24 @@ exports[`rendering basic tabs should navigate with the keyboard 2`] = `
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--1"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-2"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--2"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-3"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab Three
@@ -233,10 +233,10 @@ exports[`rendering basic tabs should navigate with the keyboard 2`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--0"
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -248,10 +248,9 @@ exports[`rendering basic tabs should navigate with the keyboard 2`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--3--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -260,9 +259,10 @@ exports[`rendering basic tabs should navigate with the keyboard 2`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          id="panel--3--2"
+          hidden=""
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -276,7 +276,7 @@ exports[`rendering basic tabs should navigate with the keyboard 2`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 3`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed left twice back to tab 3 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -287,19 +287,18 @@ exports[`rendering basic tabs should navigate with the keyboard 3`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--0"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-1"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="false"
           data-reach-tab=""
           id="tab-2"
@@ -310,12 +309,13 @@ exports[`rendering basic tabs should navigate with the keyboard 3`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--2"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-3"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab Three
@@ -325,9 +325,10 @@ exports[`rendering basic tabs should navigate with the keyboard 3`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
-          id="panel--3--0"
+          hidden=""
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -339,10 +340,10 @@ exports[`rendering basic tabs should navigate with the keyboard 3`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -351,10 +352,9 @@ exports[`rendering basic tabs should navigate with the keyboard 3`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--3--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -368,7 +368,7 @@ exports[`rendering basic tabs should navigate with the keyboard 3`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 4`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed right back to the start 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -379,18 +379,19 @@ exports[`rendering basic tabs should navigate with the keyboard 4`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--0"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-1"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="false"
           data-reach-tab=""
           id="tab-2"
@@ -401,13 +402,12 @@ exports[`rendering basic tabs should navigate with the keyboard 4`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--2"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-3"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab Three
@@ -417,10 +417,9 @@ exports[`rendering basic tabs should navigate with the keyboard 4`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--3--0"
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -432,10 +431,10 @@ exports[`rendering basic tabs should navigate with the keyboard 4`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -444,9 +443,10 @@ exports[`rendering basic tabs should navigate with the keyboard 4`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          id="panel--3--2"
+          hidden=""
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -460,7 +460,7 @@ exports[`rendering basic tabs should navigate with the keyboard 4`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 5`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed right to tab 2 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -471,7 +471,7 @@ exports[`rendering basic tabs should navigate with the keyboard 5`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
+          aria-controls="panel--_REACH_ID_--0"
           aria-selected="false"
           data-reach-tab=""
           id="tab-1"
@@ -482,7 +482,7 @@ exports[`rendering basic tabs should navigate with the keyboard 5`] = `
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="true"
           data-reach-tab=""
           data-selected=""
@@ -494,7 +494,7 @@ exports[`rendering basic tabs should navigate with the keyboard 5`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
+          aria-controls="panel--_REACH_ID_--2"
           aria-selected="false"
           data-reach-tab=""
           id="tab-3"
@@ -509,10 +509,10 @@ exports[`rendering basic tabs should navigate with the keyboard 5`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--0"
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -524,9 +524,9 @@ exports[`rendering basic tabs should navigate with the keyboard 5`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
-          id="panel--3--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -535,10 +535,10 @@ exports[`rendering basic tabs should navigate with the keyboard 5`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -552,7 +552,7 @@ exports[`rendering basic tabs should navigate with the keyboard 5`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 6`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed right to tab 3 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -563,7 +563,7 @@ exports[`rendering basic tabs should navigate with the keyboard 6`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
+          aria-controls="panel--_REACH_ID_--0"
           aria-selected="false"
           data-reach-tab=""
           id="tab-1"
@@ -574,7 +574,7 @@ exports[`rendering basic tabs should navigate with the keyboard 6`] = `
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="false"
           data-reach-tab=""
           id="tab-2"
@@ -585,7 +585,7 @@ exports[`rendering basic tabs should navigate with the keyboard 6`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
+          aria-controls="panel--_REACH_ID_--2"
           aria-selected="true"
           data-reach-tab=""
           data-selected=""
@@ -601,10 +601,10 @@ exports[`rendering basic tabs should navigate with the keyboard 6`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--0"
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -616,10 +616,10 @@ exports[`rendering basic tabs should navigate with the keyboard 6`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -628,9 +628,9 @@ exports[`rendering basic tabs should navigate with the keyboard 6`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          id="panel--3--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -644,7 +644,7 @@ exports[`rendering basic tabs should navigate with the keyboard 6`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 7`] = `
+exports[`rendering basic tabs should navigate with the keyboard: keyed right twice to tab 3 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -655,19 +655,18 @@ exports[`rendering basic tabs should navigate with the keyboard 7`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--0"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-1"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="false"
           data-reach-tab=""
           id="tab-2"
@@ -678,12 +677,13 @@ exports[`rendering basic tabs should navigate with the keyboard 7`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--2"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-3"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab Three
@@ -693,9 +693,10 @@ exports[`rendering basic tabs should navigate with the keyboard 7`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
-          id="panel--3--0"
+          hidden=""
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -707,10 +708,10 @@ exports[`rendering basic tabs should navigate with the keyboard 7`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -719,10 +720,9 @@ exports[`rendering basic tabs should navigate with the keyboard 7`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--3--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -736,7 +736,7 @@ exports[`rendering basic tabs should navigate with the keyboard 7`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the keyboard 8`] = `
+exports[`rendering basic tabs should navigate with the mouse: tab 1 clicked 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -747,18 +747,19 @@ exports[`rendering basic tabs should navigate with the keyboard 8`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--3--0"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--0"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-1"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab One
         </button>
         <button
-          aria-controls="panel--3--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="false"
           data-reach-tab=""
           id="tab-2"
@@ -769,13 +770,12 @@ exports[`rendering basic tabs should navigate with the keyboard 8`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--3--2"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--2"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-3"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab Three
@@ -785,10 +785,9 @@ exports[`rendering basic tabs should navigate with the keyboard 8`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--3--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--3--0"
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -800,10 +799,10 @@ exports[`rendering basic tabs should navigate with the keyboard 8`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--3--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--3--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -812,9 +811,10 @@ exports[`rendering basic tabs should navigate with the keyboard 8`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--3--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          id="panel--3--2"
+          hidden=""
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -828,7 +828,7 @@ exports[`rendering basic tabs should navigate with the keyboard 8`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the mouse 1`] = `
+exports[`rendering basic tabs should navigate with the mouse: tab 1 then 3 clicked 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -839,19 +839,18 @@ exports[`rendering basic tabs should navigate with the mouse 1`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--2--0"
-          aria-selected="true"
+          aria-controls="panel--_REACH_ID_--0"
+          aria-selected="false"
           data-reach-tab=""
-          data-selected=""
           id="tab-1"
           role="tab"
-          tabindex="0"
+          tabindex="-1"
           type="button"
         >
           Tab One
         </button>
         <button
-          aria-controls="panel--2--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="false"
           data-reach-tab=""
           id="tab-2"
@@ -862,12 +861,13 @@ exports[`rendering basic tabs should navigate with the mouse 1`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--2--2"
-          aria-selected="false"
+          aria-controls="panel--_REACH_ID_--2"
+          aria-selected="true"
           data-reach-tab=""
+          data-selected=""
           id="tab-3"
           role="tab"
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           Tab Three
@@ -877,9 +877,10 @@ exports[`rendering basic tabs should navigate with the mouse 1`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--2--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
-          id="panel--2--0"
+          hidden=""
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -891,10 +892,10 @@ exports[`rendering basic tabs should navigate with the mouse 1`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--2--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--2--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -903,10 +904,9 @@ exports[`rendering basic tabs should navigate with the mouse 1`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--2--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
-          hidden=""
-          id="panel--2--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
@@ -920,7 +920,7 @@ exports[`rendering basic tabs should navigate with the mouse 1`] = `
 </DocumentFragment>
 `;
 
-exports[`rendering basic tabs should navigate with the mouse 2`] = `
+exports[`rendering basic tabs should navigate with the mouse: tab 2 clicked 1`] = `
 <DocumentFragment>
   <div>
     <div
@@ -931,7 +931,7 @@ exports[`rendering basic tabs should navigate with the mouse 2`] = `
         role="tablist"
       >
         <button
-          aria-controls="panel--2--0"
+          aria-controls="panel--_REACH_ID_--0"
           aria-selected="false"
           data-reach-tab=""
           id="tab-1"
@@ -942,7 +942,7 @@ exports[`rendering basic tabs should navigate with the mouse 2`] = `
           Tab One
         </button>
         <button
-          aria-controls="panel--2--1"
+          aria-controls="panel--_REACH_ID_--1"
           aria-selected="true"
           data-reach-tab=""
           data-selected=""
@@ -954,7 +954,7 @@ exports[`rendering basic tabs should navigate with the mouse 2`] = `
           Tab Two
         </button>
         <button
-          aria-controls="panel--2--2"
+          aria-controls="panel--_REACH_ID_--2"
           aria-selected="false"
           data-reach-tab=""
           id="tab-3"
@@ -969,10 +969,10 @@ exports[`rendering basic tabs should navigate with the mouse 2`] = `
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tab--2--0"
+          aria-labelledby="tab--_REACH_ID_--0"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--2--0"
+          id="panel--_REACH_ID_--0"
           role="tabpanel"
           tabindex="-1"
         >
@@ -984,9 +984,9 @@ exports[`rendering basic tabs should navigate with the mouse 2`] = `
           </button>
         </div>
         <div
-          aria-labelledby="tab--2--1"
+          aria-labelledby="tab--_REACH_ID_--1"
           data-reach-tab-panel=""
-          id="panel--2--1"
+          id="panel--_REACH_ID_--1"
           role="tabpanel"
           tabindex="-1"
         >
@@ -995,102 +995,10 @@ exports[`rendering basic tabs should navigate with the mouse 2`] = `
           </h1>
         </div>
         <div
-          aria-labelledby="tab--2--2"
+          aria-labelledby="tab--_REACH_ID_--2"
           data-reach-tab-panel=""
           hidden=""
-          id="panel--2--2"
-          role="tabpanel"
-          tabindex="-1"
-        >
-          <h1>
-            three!
-          </h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`rendering basic tabs should navigate with the mouse 3`] = `
-<DocumentFragment>
-  <div>
-    <div
-      data-reach-tabs=""
-    >
-      <div
-        data-reach-tab-list=""
-        role="tablist"
-      >
-        <button
-          aria-controls="panel--2--0"
-          aria-selected="false"
-          data-reach-tab=""
-          id="tab-1"
-          role="tab"
-          tabindex="-1"
-          type="button"
-        >
-          Tab One
-        </button>
-        <button
-          aria-controls="panel--2--1"
-          aria-selected="false"
-          data-reach-tab=""
-          id="tab-2"
-          role="tab"
-          tabindex="-1"
-          type="button"
-        >
-          Tab Two
-        </button>
-        <button
-          aria-controls="panel--2--2"
-          aria-selected="true"
-          data-reach-tab=""
-          data-selected=""
-          id="tab-3"
-          role="tab"
-          tabindex="0"
-          type="button"
-        >
-          Tab Three
-        </button>
-      </div>
-      <div
-        data-reach-tab-panels=""
-      >
-        <div
-          aria-labelledby="tab--2--0"
-          data-reach-tab-panel=""
-          hidden=""
-          id="panel--2--0"
-          role="tabpanel"
-          tabindex="-1"
-        >
-          <h1>
-            one!
-          </h1>
-          <button>
-            yo
-          </button>
-        </div>
-        <div
-          aria-labelledby="tab--2--1"
-          data-reach-tab-panel=""
-          hidden=""
-          id="panel--2--1"
-          role="tabpanel"
-          tabindex="-1"
-        >
-          <h1>
-            two!
-          </h1>
-        </div>
-        <div
-          aria-labelledby="tab--2--2"
-          data-reach-tab-panel=""
-          id="panel--2--2"
+          id="panel--_REACH_ID_--2"
           role="tabpanel"
           tabindex="-1"
         >
